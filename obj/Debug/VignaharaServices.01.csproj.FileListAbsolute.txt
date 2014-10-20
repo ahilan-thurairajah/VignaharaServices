@@ -1,0 +1,4 @@
+D:\Projects\vighnahara\Code\web\bin\VignaharaServices_01.dll
+D:\Projects\vighnahara\Code\web\bin\VignaharaServices_01.pdb
+D:\Projects\vighnahara\Code\VignaharaServices\obj\Debug\VignaharaServices_01.dll
+D:\Projects\vighnahara\Code\VignaharaServices\obj\Debug\VignaharaServices_01.pdb
