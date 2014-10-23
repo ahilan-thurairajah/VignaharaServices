@@ -3,3 +3,12 @@ D:\Projects\vighnahara\Code\web\bin\VignaharaServices.pdb
 D:\Projects\vighnahara\Code\VignaharaServices\obj\Debug\VignaharaServices.csprojResolveAssemblyReference.cache
 D:\Projects\vighnahara\Code\VignaharaServices\obj\Debug\VignaharaServices.dll
 D:\Projects\vighnahara\Code\VignaharaServices\obj\Debug\VignaharaServices.pdb
+D:\Projects\vighnahara\Code\web\bin\VignaharaServices.dll.config
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.Context.cs
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.cs
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.Designer.cs
+D:\Projects\vighnahara\Code\web\bin\App_Code\User.cs
+D:\Projects\vighnahara\Code\web\bin\App_Code\Vignahara_Contact.cs
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.Context.tt
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.edmx.diagram
+D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.tt

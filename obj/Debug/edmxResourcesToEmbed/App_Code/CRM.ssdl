@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VignaharaDNNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsSuperUser" Type="bit" Nullable="false" />
+    <Property Name="AffiliateId" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UpdatePassword" Type="bit" Nullable="false" />
+    <Property Name="LastIPAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="int" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserID" Type="int" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="PasswordResetToken" Type="uniqueidentifier" />
+    <Property Name="PasswordResetExpiration" Type="datetime" />
+    <Property Name="LowerEmail" Type="nvarchar" MaxLength="256" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Vignahara_Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PortalID" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1024" />
+    <Property Name="City" Type="nvarchar" MaxLength="128" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Telephone01" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone02" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone03" Type="nvarchar" MaxLength="50" />
+    <Property Name="TelephoneType01" Type="nvarchar" MaxLength="10" />
+    <Property Name="TelephoneType02" Type="nvarchar" MaxLength="10" />
+    <Property Name="TelephoneType03" Type="nvarchar" MaxLength="10" />
+    <Property Name="URL" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="VignaharaDNNModelStoreContainer">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vignahara_Contact" EntityType="Self.Vignahara_Contact" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
