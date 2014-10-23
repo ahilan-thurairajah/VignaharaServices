@@ -15,9 +15,9 @@ namespace VignaharaServices
     {
         private int _portalID = PortalController.Instance.GetCurrentPortalSettings().PortalId;
 
-        [AllowAnonymous]
         [HttpGet]
-        public List<VignaharaServices.App_Code.Vignahara_Contact> GetContacts(int pId)
+        [DnnAuthorize(StaticRoles = "Administrators")]
+        public HttpResponseMessage GetContacts(int pId)
         {
             VignaharaServices.App_Code.VignaharaDNNEntities crm = new VignaharaServices.App_Code.VignaharaDNNEntities();
             /*
@@ -35,12 +35,12 @@ namespace VignaharaServices
 
             //return connHelper.GetConnection().ConnectionString;
 
-            return (from c in crm.Vignahara_Contact where c.PortalID == _portalID select c).ToList() ;
+            return Request.CreateResponse(HttpStatusCode.OK,(from c in crm.Vignahara_Contact where c.PortalID == _portalID select c)) ;
         }
 
-        [RequireHost]
         [HttpGet]
-        public List<DNNUser> GetUsers()
+        [DnnAuthorize(StaticRoles = "Administrators")]
+        public HttpResponseMessage GetUsers()
         {
             List<DNNUser> userList = new List<DNNUser>() ;
             foreach (UserInfo ui in UserController.GetUsers(_portalID)) {
@@ -54,7 +54,7 @@ namespace VignaharaServices
                 }) ;
             } ;
             
-            return userList;
+            return Request.CreateResponse(HttpStatusCode.OK,  userList);
         }
 
 
