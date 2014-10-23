@@ -12,3 +12,16 @@ D:\Projects\vighnahara\Code\web\bin\App_Code\Vignahara_Contact.cs
 D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.Context.tt
 D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.edmx.diagram
 D:\Projects\vighnahara\Code\web\bin\App_Code\CRM.tt
+C:\Projects\Vignahara\Code\VignaharaServices\obj\Debug\VignaharaServices.csprojResolveAssemblyReference.cache
+C:\Projects\Vignahara\Code\VignaharaServices\obj\Debug\VignaharaServices.dll
+C:\Projects\Vignahara\Code\VignaharaServices\obj\Debug\VignaharaServices.pdb
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.Context.cs
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.cs
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.Designer.cs
+C:\Projects\Vignahara\Code\web\bin\App_Code\Vignahara_Contact.cs
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.Context.tt
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.edmx.diagram
+C:\Projects\Vignahara\Code\web\bin\App_Code\CRM.tt
+C:\Projects\Vignahara\Code\web\bin\VignaharaServices.dll.config
+C:\Projects\Vignahara\Code\web\bin\VignaharaServices.dll
+C:\Projects\Vignahara\Code\web\bin\VignaharaServices.pdb

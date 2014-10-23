@@ -33,5 +33,7 @@ namespace VignaharaServices.App_Code
         public string TelephoneType02 { get; set; }
         public string TelephoneType03 { get; set; }
         public string URL { get; set; }
+        public Nullable<System.DateTime> LastModifiedOnDate { get; set; }
+        public Nullable<int> LastModifiedByUserID { get; set; }
     }
 }

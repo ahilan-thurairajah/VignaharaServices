@@ -23,32 +23,10 @@
     <Property Name="TelephoneType02" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TelephoneType03" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="URL" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifiedOnDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedByUserID" Type="Int32" />
   </EntityType>
   <EntityContainer Name="VignaharaDNNEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Vignahara_Contact" EntityType="Self.Vignahara_Contact" />
-    <EntitySet Name="Users" EntityType="VignaharaDNNModel.User" />
   </EntityContainer>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="UserID" />
-    </Key>
-    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Username" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IsSuperUser" Type="Boolean" Nullable="false" />
-    <Property Name="AffiliateId" Type="Int32" />
-    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-    <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="UpdatePassword" Type="Boolean" Nullable="false" />
-    <Property Name="LastIPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedByUserID" Type="Int32" />
-    <Property Name="CreatedOnDate" Type="DateTime" Precision="3" />
-    <Property Name="LastModifiedByUserID" Type="Int32" />
-    <Property Name="LastModifiedOnDate" Type="DateTime" Precision="3" />
-    <Property Name="PasswordResetToken" Type="Guid" />
-    <Property Name="PasswordResetExpiration" Type="DateTime" Precision="3" />
-    <Property Name="LowerEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
-  </EntityType>
 </Schema>

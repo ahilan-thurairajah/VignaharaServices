@@ -97,17 +97,15 @@
     <Compile Include="DBConnectionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteMapper.cs" />
-    <Compile Include="App_Code\User.cs">
-      <DependentUpon>CRM.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="App_Code\Vignahara_Contact.cs">
       <DependentUpon>CRM.tt</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="App_Code\CRM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CRM.Designer.cs</LastGenOutput>

@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Vignahara_Contact">
       <EntityTypeMapping TypeName="VignaharaDNNModel.Vignahara_Contact">
         <MappingFragment StoreEntitySet="Vignahara_Contact">
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
           <ScalarProperty Name="ContactID" ColumnName="ContactID" />
           <ScalarProperty Name="PortalID" ColumnName="PortalID" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -23,30 +25,6 @@
           <ScalarProperty Name="TelephoneType02" ColumnName="TelephoneType02" />
           <ScalarProperty Name="TelephoneType03" ColumnName="TelephoneType03" />
           <ScalarProperty Name="URL" ColumnName="URL" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="VignaharaDNNModel.User">
-        <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="LowerEmail" ColumnName="LowerEmail" />
-          <ScalarProperty Name="PasswordResetExpiration" ColumnName="PasswordResetExpiration" />
-          <ScalarProperty Name="PasswordResetToken" ColumnName="PasswordResetToken" />
-          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
-          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
-          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
-          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="LastIPAddress" ColumnName="LastIPAddress" />
-          <ScalarProperty Name="UpdatePassword" ColumnName="UpdatePassword" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
-          <ScalarProperty Name="IsSuperUser" ColumnName="IsSuperUser" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

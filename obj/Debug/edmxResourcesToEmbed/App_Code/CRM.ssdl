@@ -1,28 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="VignaharaDNNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Users">
-    <Key>
-      <PropertyRef Name="UserID" />
-    </Key>
-    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Username" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="IsSuperUser" Type="bit" Nullable="false" />
-    <Property Name="AffiliateId" Type="int" />
-    <Property Name="Email" Type="nvarchar" MaxLength="256" />
-    <Property Name="DisplayName" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="UpdatePassword" Type="bit" Nullable="false" />
-    <Property Name="LastIPAddress" Type="nvarchar" MaxLength="50" />
-    <Property Name="IsDeleted" Type="bit" Nullable="false" />
-    <Property Name="CreatedByUserID" Type="int" />
-    <Property Name="CreatedOnDate" Type="datetime" />
-    <Property Name="LastModifiedByUserID" Type="int" />
-    <Property Name="LastModifiedOnDate" Type="datetime" />
-    <Property Name="PasswordResetToken" Type="uniqueidentifier" />
-    <Property Name="PasswordResetExpiration" Type="datetime" />
-    <Property Name="LowerEmail" Type="nvarchar" MaxLength="256" StoreGeneratedPattern="Computed" />
-  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VignaharaDNN.dbo.Vignahara_Contact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Vignahara_Contact">
     <Key>
       <PropertyRef Name="ContactID" />
@@ -46,9 +25,34 @@
     <Property Name="TelephoneType02" Type="nvarchar" MaxLength="10" />
     <Property Name="TelephoneType03" Type="nvarchar" MaxLength="10" />
     <Property Name="URL" Type="nvarchar" MaxLength="10" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserID" Type="int" />
   </EntityType>
   <EntityContainer Name="VignaharaDNNModelStoreContainer">
-    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Vignahara_Contact" EntityType="Self.Vignahara_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vignahara_Contact" EntityType="Self.Vignahara_Contact" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vignahara_Contact].[ContactID] AS [ContactID], 
+    [Vignahara_Contact].[PortalID] AS [PortalID], 
+    [Vignahara_Contact].[UserId] AS [UserId], 
+    [Vignahara_Contact].[FirstName] AS [FirstName], 
+    [Vignahara_Contact].[LastName] AS [LastName], 
+    [Vignahara_Contact].[DisplayName] AS [DisplayName], 
+    [Vignahara_Contact].[Email] AS [Email], 
+    [Vignahara_Contact].[Address] AS [Address], 
+    [Vignahara_Contact].[City] AS [City], 
+    [Vignahara_Contact].[Province] AS [Province], 
+    [Vignahara_Contact].[Country] AS [Country], 
+    [Vignahara_Contact].[PostalCode] AS [PostalCode], 
+    [Vignahara_Contact].[Telephone01] AS [Telephone01], 
+    [Vignahara_Contact].[Telephone02] AS [Telephone02], 
+    [Vignahara_Contact].[Telephone03] AS [Telephone03], 
+    [Vignahara_Contact].[TelephoneType01] AS [TelephoneType01], 
+    [Vignahara_Contact].[TelephoneType02] AS [TelephoneType02], 
+    [Vignahara_Contact].[TelephoneType03] AS [TelephoneType03], 
+    [Vignahara_Contact].[URL] AS [URL], 
+    [Vignahara_Contact].[LastModifiedOnDate] AS [LastModifiedOnDate], 
+    [Vignahara_Contact].[LastModifiedByUserID] AS [LastModifiedByUserID]
+    FROM [dbo].[Vignahara_Contact] AS [Vignahara_Contact]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

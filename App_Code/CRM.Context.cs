@@ -26,6 +26,5 @@ namespace VignaharaServices.App_Code
         }
     
         public virtual DbSet<Vignahara_Contact> Vignahara_Contact { get; set; }
-        public virtual DbSet<User> Users { get; set; }
     }
 }
